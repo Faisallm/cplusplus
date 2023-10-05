@@ -4,6 +4,9 @@ using namespace std;
 
 int main()
 {
+    // printing out to console and variables
+
+
     // declaration and assignment of variable
     string characterName = "Faisal";
     // declaration of variable
