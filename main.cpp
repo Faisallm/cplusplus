@@ -5,35 +5,28 @@ using namespace std;
 
 int main()
 {
-    int secretNum = 7;
-    int guess;
-    int guessCount = 0;
-    int guessLimit = 3;
-    bool outOfGuesses = false;
 
-    // that's a unique way of writhing the condition
+    // for loops
+    // no cap but c++ is alot like Javascript.
 
-    while (guess != secretNum && !outOfGuesses) {
+    //int index = 1;
+    //while(index <= 5) {
+      //  cout << index << endl;
+        //index++;
+    //}
+    // array of integers
+    int nums[] = {1, 2, 5, 7, 3};
+    int lengthArr = sizeof(nums) / sizeof(nums[0]);
 
-        if (guessCount < guessLimit) {
-            cout << "Enter a guess: ";
-            cin >> guess;
-            guessCount++;
-        } else {
-            outOfGuesses = true;
-        }
+
+    // iterating through the contents of an array
+    // technically, that's how we roll
+
+    for(int i=0; i < lengthArr; i++) {
+        cout << nums[i] << endl;
     }
 
-    //do {
-      //  cout << "Enter a guess: ";
-        //cin >> guess;
-    //} while(guess != secretNum);
-
-    if (outOfGuesses) {
-        cout << "You Lose!";
-    } else {
-        cout << "You Win!";
-    }
+    cout << "The length of the array above is: " << lengthArr << endl;
 
 
     return 0;
