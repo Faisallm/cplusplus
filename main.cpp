@@ -3,28 +3,38 @@
 
 using namespace std;
 
-int getMax(int num1, int num2, int num3) {
-    int result;
-
-    if(num1 >= num2 && num1 >= num3) {
-        result = num1;
-    } else if (num2 >= num1 && num2 >= num3) {
-        result = num2;
-    } else {
-        // the only possibility we have remaining.
-        result = num3;
-    }
-
-    return result;
-}
-
 
 int main()
 {
-    // using comparision inside of if statements
 
-    cout << getMax(9, 9, 7) << endl;
+    int num1, num2;
+    // this will store a single character value
+    char op;
 
+    cout << "Enter first number: ";
+    cin >> num1;
+
+    cout << "Enter operator: ";
+    cin >> op;
+
+    cout << "Enter the second number: ";
+    cin >> num2;
+
+    int result;
+
+    if (op == '+') {
+        result = num1 + num2;
+    } else if (op == '-') {
+        result = num1 - num2;
+    } else if (op == '*') {
+        result = num1 * num2;
+    } else if (op == '/') {
+        result = num1 / num2;
+    } else {
+        cout << "Invalid Operator" << endl;
+    }
+
+    cout << result << endl;
 
     return 0;
 }
