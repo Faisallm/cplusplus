@@ -3,27 +3,25 @@
 
 using namespace std;
 
+// declare the function, give it a signature.
+// function signature / function stub
+void sayHi(string name, int age);
+
 int main()
 {
-    // arrays (like python lists)
-    // we are essentially telling c++, we want to store 20 elements...
-    // in this luckyNums array
+    // functions
 
-    //int luckyNums[20] = {4, 8, 15, 16, 23, 42};
-    int luckyNums[20];
-
-    // modifying the first element of an array
-    luckyNums[0] = 7;
-
-    // adding a value
-    luckyNums[10] = 100;
-
-
-    cout << "last element: " << luckyNums[5] << endl;
-    cout << "first element: " << luckyNums[0] << endl;
-    cout << "10th value: " << luckyNums[10] << endl;
-    cout << "Let's see the 11th value: " << luckyNums[11] << endl;
-
+    cout << "Top" << endl;
+    // running the function
+    sayHi("Faisal", 20);
+    sayHi("Amina", 15);
+    cout << "Bottom";
 
     return 0;
+}
+
+
+// void means that the function will not return anything.
+void sayHi(string name, int age) {
+    cout << "Hello "<< name << " you are " << age << " years old." << endl;
 }
