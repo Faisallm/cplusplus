@@ -3,24 +3,28 @@
 
 using namespace std;
 
+int getMax(int num1, int num2, int num3) {
+    int result;
+
+    if(num1 >= num2 && num1 >= num3) {
+        result = num1;
+    } else if (num2 >= num1 && num2 >= num3) {
+        result = num2;
+    } else {
+        // the only possibility we have remaining.
+        result = num3;
+    }
+
+    return result;
+}
+
+
 int main()
 {
-    bool isMale = false;
-    bool isTall = true;
+    // using comparision inside of if statements
 
-    if(isMale && isTall) {
-        // is male and is tall
-        cout << "You are a tall male";
-    } else if (isMale && !isTall)  {
-        // is male and is not tall
-        cout << "You are a short male";
-    } else if (!isMale && isTall) {
-        // is not male but tall
-        cout << "You are tall but not male";
-    }
-    else {
-        cout << "You are not male and not tall";
-    }
+    cout << getMax(9, 9, 7) << endl;
+
 
     return 0;
 }
