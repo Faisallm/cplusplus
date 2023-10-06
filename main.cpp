@@ -5,23 +5,36 @@ using namespace std;
 
 int main()
 {
-    int index = 6;
+    int secretNum = 7;
+    int guess;
+    int guessCount = 0;
+    int guessLimit = 3;
+    bool outOfGuesses = false;
 
-    //while(index <= 5) {
-        // print out index
-      //  cout << index << endl;
-        // increment index by 1
-        //index++;
-    //}
+    // that's a unique way of writhing the condition
 
+    while (guess != secretNum && !outOfGuesses) {
 
-    // a do-while loop will run the code at least once...
-    // before checking the condition.
+        if (guessCount < guessLimit) {
+            cout << "Enter a guess: ";
+            cin >> guess;
+            guessCount++;
+        } else {
+            outOfGuesses = true;
+        }
+    }
 
-    do {
-        cout << index << endl;
-        index++;
-    } while(index <= 5);
+    //do {
+      //  cout << "Enter a guess: ";
+        //cin >> guess;
+    //} while(guess != secretNum);
+
+    if (outOfGuesses) {
+        cout << "You Lose!";
+    } else {
+        cout << "You Win!";
+    }
+
 
     return 0;
 }
