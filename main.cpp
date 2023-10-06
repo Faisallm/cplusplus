@@ -3,20 +3,22 @@
 
 using namespace std;
 
-int power(int baseNum, int powNum) {
-    int result = 1;
-
-    for(int i = 0; i < powNum; i++) {
-        result *= baseNum;
-    }
-
-    return result;
-}
 
 int main()
 {
 
-    cout << power(4, 2) << endl;
+    // 2-dimensional arrays and nested for loops
+
+    // 3 ROWS AND 2 COLUMNS,
+    // essentially we are building a matrix
+    int numberGrid[3][2] = {
+        {1, 2},
+        {3, 4},
+        {5, 6}
+    };
+
+    // printing the 2D arrays
+    cout << numberGrid[2][1];
 
     return 0;
 }
