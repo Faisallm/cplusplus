@@ -5,20 +5,24 @@ using namespace std;
 
 int main()
 {
-    string color, pluralNoun, celebrity;
+    // arrays (like python lists)
+    // we are essentially telling c++, we want to store 20 elements...
+    // in this luckyNums array
 
-    cout << "Enter a color:";
-    getline(cin, color);
+    //int luckyNums[20] = {4, 8, 15, 16, 23, 42};
+    int luckyNums[20];
 
-    cout << "Enter a plural noun: ";
-    getline(cin, pluralNoun);
+    // modifying the first element of an array
+    luckyNums[0] = 7;
 
-    cout << "Enter a celebrity: ";
-    getline(cin, celebrity);
+    // adding a value
+    luckyNums[10] = 100;
 
-    cout << "Roses are " << color << endl;
-    cout << pluralNoun <<" are blue" << endl;
-    cout << "I love " << celebrity << endl;
+
+    cout << "last element: " << luckyNums[5] << endl;
+    cout << "first element: " << luckyNums[0] << endl;
+    cout << "10th value: " << luckyNums[10] << endl;
+    cout << "Let's see the 11th value: " << luckyNums[11] << endl;
 
 
     return 0;
