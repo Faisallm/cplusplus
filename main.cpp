@@ -3,45 +3,26 @@
 
 using namespace std;
 
-string getDayOfWeek(int dayNum) {
-    string dayName;
-
-    switch(dayNum) {
-    case 0:
-        dayName = "Sunday";
-        break;
-    case 1:
-        dayName = "Monday";
-        break;
-    case 2:
-        dayName = "Tuesday";
-        break;
-    case 3:
-        dayName = "Wednesday";
-        break;
-    case 4:
-        dayName = "Thursday";
-        break;
-    case 5:
-        dayName = "Friday";
-        break;
-    case 6:
-        dayName = "Saturday";
-        break;
-    default:
-        dayName = "Invalid day number";
-    }
-
-
-    return dayName;
-}
-
 int main()
 {
+    int index = 6;
 
-    // switch statement is a special type of if statement.
+    //while(index <= 5) {
+        // print out index
+      //  cout << index << endl;
+        // increment index by 1
+        //index++;
+    //}
 
-    cout << getDayOfWeek(9);
+
+    // a do-while loop will run the code at least once...
+    // before checking the condition.
+
+    do {
+        cout << index << endl;
+        index++;
+    } while(index <= 5);
+
     return 0;
 }
 
