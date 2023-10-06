@@ -5,21 +5,16 @@ using namespace std;
 
 int main()
 {
-    //char age;
-    //double ager;
+    // calculator
+    double n    um1, num2;
 
-    //cout << "Enter your name: ";
-    //cin >> age;
+    cout << "Enter first number: ";
+    cin >> num1;
 
-    //cout << "You are " << age << " years old" << endl;
-    //cout << "You are " << ager << " years old" << endl;
+    cout << "Enter second number: ";
+    cin >> num2;
 
-    string name;
-
-    cout << "Enter your name: ";
-    getline(cin, name);
-
-    cout << "Hello " << name;
+    cout << num1 + num2;
 
 
     return 0;
