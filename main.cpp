@@ -4,37 +4,21 @@ using namespace std;
 
 int main()
 {
-    // data-types
-
-    // char (short for character), used to store a single character
-    // store one single character
-    // it uses a single quotation mark
-
-    char grade = 'A';
-    // to store multiple character's we use a string
-    string phrase = "Girrafe Academy";
-
-    // numbers (two types, whole numbers and decimal numbers)
-    // decimal numbers can also be called floating point numbers
-
-    // whole numbers
-    int age = 50;
-    int temperature = -5;
-    // decimal numbers
-    double gpa = 3.99;
-
-    // boolean (true false value)
-
-    bool isMale = true;
-
-    cout << "age: " << 50 << endl;
-
-
-    cout << grade << endl;
+    string phrase = "Giraffe Academy";
+    string phraseSub;
+    // in python, you can't modify strings
+    // in c++ you can modify strings
+    cout << phrase;
+    cout << phrase.length() << endl;
+    cout << phrase[0] << endl;
+    // I want to change the value of the string
+    phrase[0] = 'B';
     cout << phrase << endl;
-    cout << gpa << endl;
-    cout << isMale << endl;
-
+    cout << phrase.find("Academy", 0) << endl;
+    cout << phrase.find("ffe", 0) << endl;
+    // string splitting in c++
+    phraseSub = phrase.substr(8, 3);
+    cout << phraseSub;
 
     return 0;
 }
