@@ -3,30 +3,44 @@
 
 using namespace std;
 
+// A class is a specification or blueprint for our new data-type.
+// specification, blueprint or template of a data-type.
+// a way to model a real world-entity in our program.
+class Book {
+    public:
+        // attributes of a books
+        // blueprint of a book data-type.
+        string title;
+        string author;
+        int pages;
+
+};
+
 
 int main()
 {
-    int age = 19;
-    // gives us the pointer where a variable is stored.
-    int *pAge = &age;
-    double gpa = 2.7;
-    double *pGpa = &gpa;
-    string name = "Faisal";
-    // storing a pointer for the name
-    // the memory address of name variable
-    string *pName = &name;
 
-    // a pointer is a type of information we can work with in our program.
-    //cout << &age << endl;
-    //cout << &gpa << endl;
-    //cout << &name << endl;
-    cout << pName << endl;
-    cout << *pAge  << endl;
+    // A class is essentially a new data-type
+    Book book1;
 
-    cout << *&*&gpa;
+    book1.title = "Harry Potter";
+    book1.author = "JK Rowling";
+    book1.pages = 500;
 
-    // derefferencing a pointer.
+    Book book2;
 
+    book2.title = "Lord of the Rings";
+    book2.author = "Tolkein";
+    book2.pages = 700;
+    book2.title = "Hunger games";
+
+
+    cout << book1.title << endl;
+    cout << book1.pages << endl;
+
+    cout << book2.title << endl;
+    cout << book2.pages << endl;
+    cout << book2.author << endl;
 
 
     return 0;
