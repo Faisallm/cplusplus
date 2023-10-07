@@ -3,34 +3,43 @@
 
 using namespace std;
 
-class Student {
-    public:
-        string name;
-        string major;
-        double gpa;
+class Movie {
+    private:
+        // only code that's inside the movie class can access the rating.
+        string rating;
 
-        Student(string aName, string aMajor, double aGpa) {
-            name = aName;
-            major = aMajor;
-            gpa = aGpa;
+    public:
+        string title;
+        string director;
+        Movie(string aTitle, string aDirector, string aRating) {
+            title = aTitle;
+            director = aDirector;
+            setRating(aRating);
         }
 
-        bool hasHonors() {
-            if(gpa >= 2.0) {
-                return true;
+        void setRating(string aRating) {
+            if(aRating == "G" || aRating == "PG" || aRating == "PG-13" || aRating == "R" || aRating == "NR") {
+                rating = aRating;
+            } else {
+                // this is like a default rating (not rated)
+                rating = "NR";
             }
-            return false;
+        }
+
+        string getRating() {
+            return rating;
         }
 };
 
-
 int main()
 {
-    Student student1("Faisal", "Engineering", 4.0);
-    Student student2("Amina", "Agriculture", 4.0);
+    // getters and setters allows us to control access to attributes
+    Movie avengers("The Avengers", "Joss Whedon", "PG-13");
 
-    cout << student1.hasHonors() << endl;
-    cout << student2.hasHonors() << endl;
+    avengers.setRating("N");
+
+    cout << avengers.getRating();
+
 
     return 0;
 }
