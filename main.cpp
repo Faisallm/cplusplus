@@ -3,43 +3,52 @@
 
 using namespace std;
 
-class Movie {
-    private:
-        // only code that's inside the movie class can access the rating.
-        string rating;
-
+// superclass
+class Chef {
     public:
-        string title;
-        string director;
-        Movie(string aTitle, string aDirector, string aRating) {
-            title = aTitle;
-            director = aDirector;
-            setRating(aRating);
+
+        void makeChicken() {
+            cout << "The chef makes chicken" << endl;
         }
 
-        void setRating(string aRating) {
-            if(aRating == "G" || aRating == "PG" || aRating == "PG-13" || aRating == "R" || aRating == "NR") {
-                rating = aRating;
-            } else {
-                // this is like a default rating (not rated)
-                rating = "NR";
-            }
+        void makeSalad() {
+            cout << "The chef makes salad" << endl;
         }
 
-        string getRating() {
-            return rating;
+        void makeSpecialDish() {
+            cout << "The chef makes bbq ribs" << endl;
         }
 };
 
+// Italian chef inheriting from chef
+// it will have all the functions of the Chef class.
+// plus it's own additional functions.
+
+//subclass
+class ItalianChef: public Chef {
+    // extending the chef class
+    // make pasta
+    public:
+        void makePasta() {
+            cout << "The chef makes pasta" << endl;
+        }
+
+        void makeSpecialDish() {
+            cout << "The italian chef makes bbq ribs" << endl;
+        }
+};
+
+
 int main()
 {
-    // getters and setters allows us to control access to attributes
-    Movie avengers("The Avengers", "Joss Whedon", "PG-13");
 
-    avengers.setRating("N");
+    Chef chef;
+    chef.makeChicken();
+    chef.makeSpecialDish();
 
-    cout << avengers.getRating();
-
+    ItalianChef italianChef;
+    italianChef.makeSpecialDish();
+    italianChef.makePasta();
 
     return 0;
 }
